@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto, Philosopher } from "next/font/google";
+import { Roboto, Philosopher } from "next/font/google";
 import "./globals.css";
 import "./main.sass";
 
