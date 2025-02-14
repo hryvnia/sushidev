@@ -1,8 +1,11 @@
+"use client";
+
 import { DeliveryIcon, Logo, NewIcon, PointsIcon } from "@/assets";
 import { cloneElement, FC } from "react";
 
 import chopsticksImage from "./chopsticks.png";
 import Image from "next/image";
+import { FORM_URL } from "@/constants";
 
 export const Hero: FC = () => {
   return (
@@ -13,7 +16,16 @@ export const Hero: FC = () => {
 
           <p className="text-xl">м. Харків, просп. Аерокосмічний, 52</p>
 
-          <a href="" className="button">
+          <a
+            href="#"
+            className="button"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("menu")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
             Переглянути меню
           </a>
         </div>
@@ -29,7 +41,7 @@ export const Hero: FC = () => {
             <p className="mb-8 text-primary text-2xl font-medium uppercase">
               Знижка 20% на замовлення сету на двох
             </p>
-            <a href="#" className="button">
+            <a href={FORM_URL} target="_blank" className="button">
               Забронювати столик
             </a>
           </div>

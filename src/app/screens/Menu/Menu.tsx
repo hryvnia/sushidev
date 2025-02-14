@@ -20,7 +20,7 @@ import clsx from "clsx";
 
 export const Menu: FC = () => {
   return (
-    <section className="py-12">
+    <section id="menu" className="py-12">
       <div className="container m-auto">
         <h2 className="mb-12 text-primary text-3xl text-center font-medium uppercase tracking-[0.375rem]">
           Меню
